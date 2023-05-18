@@ -1,10 +1,17 @@
 package org.example;
 
-import java.util.Arrays;
-import java.util.HashMap;
+import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+
+        Synthesizer synth1 = new Synthesizer();
+        System.out.println(synth1.getShape());
+
+        synth1.setOscillator(OscillatorType.Triangle);
+        System.out.println(synth1.getShape());
+
+
         //primeste un array si o valoare si returneaza  indexul unde se gaseste valoarea aia sau-1 daca nu se gaseste
         //System.out.println(indexOf(new int[]{1, 2, 3, 4}, 5));
 
@@ -40,13 +47,23 @@ public class Main {
         //System.out.println(countFrequencyOfArrayValues(new int[]{1, 2, 3, 4, 5, 2, 4, 7}));
 
         //primesti un array de int-uri si reutrnezi un hashmap de int si array de int - in care cheile sunt valorile si valorile pt fiecare cheie sunt indecsii la care a aparut valoarea respectiva
-        HashMap<Integer, int[]> indexMap = getIndexOfMap(new int[]{4, 5, 2, 3, 5, 1});
+        //HashMap<Integer, int[]> indexMap = getIndexOfMap(new int[]{4, 5, 2, 3, 5, 1});
+//
+        //for(HashMap.Entry<Integer, int[]> entry : indexMap.entrySet()) {
+        //    int key = entry.getKey();
+        //    int[] value = entry.getValue();
+        //    System.out.println(key + " in array positions " + Arrays.toString(value));
+        //}
 
-        for(HashMap.Entry<Integer, int[]> entry : indexMap.entrySet()) {
-            int key = entry.getKey();
-            int[] value = entry.getValue();
-            System.out.println(key + " in array positions " + Arrays.toString(value));
-        }
+        //List<Integer> li = new ArrayList<>();
+        // int[]arr = {4, 5, 2, 3, 5, 1};
+        //for(int i = 0; i<arr.length; i++) {
+        //    li.add(arr[i]);
+        //}
+        //Collections.sort(li);
+        //System.out.println(li);
+
+
 
     }
 
@@ -158,6 +175,4 @@ public class Main {
         }
         return hash;
     }
-
-
 }

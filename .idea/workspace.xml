@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee80a2ea-1724-4c1a-8e69-5ad84a2e0ad4" name="Changes" comment="FirstCommit">
+    <list default="true" id="ee80a2ea-1724-4c1a-8e69-5ad84a2e0ad4" name="Changes" comment="last ex">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Oscillator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/OscillatorType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/SineOsc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Synthesizer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/TriangleOsc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/VST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
@@ -13,11 +19,21 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2Pq2RZ1KGEP3gjHYWcYktdhwxbQ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -65,11 +81,19 @@
       <option name="project" value="LOCAL" />
       <updated>1684395884558</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="last ex">
+      <created>1684404936113</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684404936113</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="FirstCommit" />
-    <option name="LAST_COMMIT_MESSAGE" value="FirstCommit" />
+    <MESSAGE value="last ex" />
+    <option name="LAST_COMMIT_MESSAGE" value="last ex" />
   </component>
 </project>
