@@ -37,7 +37,17 @@ public class Main {
         //System.out.println(areAnagramsHash(new int[]{1, 2, 3, 4, 5}, new int[]{4, 2, 3, 5, 1, 1}));
 
         //primeste un array de int-uri si returneaza un hashmap de unde cheile sunt valorile din array si valorile sunt de cate ori au aparut
-        System.out.println(countFrequencyOfArrayValues(new int[]{1, 2, 3, 4, 5, 2, 4, 7}));
+        //System.out.println(countFrequencyOfArrayValues(new int[]{1, 2, 3, 4, 5, 2, 4, 7}));
+
+        //primesti un array de int-uri si reutrnezi un hashmap de int si array de int - in care cheile sunt valorile si valorile pt fiecare cheie sunt indecsii la care a aparut valoarea respectiva
+        HashMap<Integer, int[]> indexMap = getIndexOfMap(new int[]{4, 5, 2, 3, 5, 1});
+
+        for(HashMap.Entry<Integer, int[]> entry : indexMap.entrySet()) {
+            int key = entry.getKey();
+            int[] value = entry.getValue();
+            System.out.println(key + " in array positions " + Arrays.toString(value));
+        }
+
     }
 
     //primeste un array si o valoare si returneaza  indexul unde se gaseste valoarea aia sau-1 daca nu se gaseste
@@ -132,17 +142,21 @@ public class Main {
         return count;
     }
 
-    //primesti un array de int-uri si reutrnezi un hashmap de int si array de int - in care cheile sunt valorile si valorile pt fiecare cheie sunt indecsii la care a aparut valoarea respectiva
-    public static HashMap<Integer, Integer> x (int[]arr) {
-        HashMap<Integer,Integer> count = new HashMap<>();
-        for (int x : arr) {
-            if (count.containsKey(x)) {
-                count.put(x, count.get(x) + 1);
+    //primesti un array de int-uri "source" si returnezi un hashmap de int si array de int - in care cheile sunt elementele din `source`, si valoarea unei chei este un array cu indecsii la care apare cheia respectiva in `source`
+    public static HashMap<Integer, int[]> getIndexOfMap(int[] source) {
+        HashMap<Integer,int[]> hash = new HashMap<>();
+        for (int i = 0; i < source.length; i++) {
+            if (hash.containsKey(source[i])) {
+                int[] indices = hash.get(source[i]);
+                int[] updatedIndices = Arrays.copyOf(indices, indices.length + 1);
+                updatedIndices[indices.length] = i;
+                hash.put(source[i], updatedIndices);
             } else {
-                count.put(x, 1);
+                int[] indices = {i};
+                hash.put(source[i], indices);
             }
         }
-        return count;
+        return hash;
     }
 
 
