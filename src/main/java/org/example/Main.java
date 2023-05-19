@@ -1,17 +1,23 @@
 package org.example;
 
+import javax.xml.xpath.XPath;
+import java.nio.file.Path;
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
 
         Synthesizer synth1 = new Synthesizer();
+        //System.out.println(synth1.getShape());
+        //
+        //synth1.setOscillator(OscillatorType.Triangle);
+        //System.out.println(synth1.getShape());
+
+        // "1" = Sine / "2" = Triangle
+        synth1.loadFromDisk(Path.of("/Users/radcambu/IdeaProjects/Meditatii/src/main/resources/Patches/Sine.txt"));
         System.out.println(synth1.getShape());
 
-        synth1.setOscillator(OscillatorType.Triangle);
-        System.out.println(synth1.getShape());
-
-        synth1.loadFromDisk("1");
+        synth1.loadFromDisk(Path.of("/Users/radcambu/IdeaProjects/Meditatii/src/main/resources/Patches/Triangle.txt"));
         System.out.println(synth1.getShape());
 
         //primeste un array si o valoare si returneaza  indexul unde se gaseste valoarea aia sau-1 daca nu se gaseste

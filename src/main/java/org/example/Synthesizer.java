@@ -1,5 +1,7 @@
 package org.example;
 
+import java.nio.file.Path;
+
 public class Synthesizer extends DiscLoadingVST implements VST {
     private Oscillator oscillator;
 
@@ -31,7 +33,7 @@ public class Synthesizer extends DiscLoadingVST implements VST {
     }
 
     @Override
-    public void loadFromDisk(String path) throws Exception {
+    public void loadFromDisk(Path path) throws Exception {
         super.loadFromDisk(path);
     }
 }
