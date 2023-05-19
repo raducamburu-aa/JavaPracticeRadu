@@ -1,6 +1,6 @@
 package org.example;
 
-public class Synthesizer {
+public class Synthesizer extends DiscLoadingVST implements VST {
     private Oscillator oscillator;
 
     public Synthesizer() {
@@ -23,5 +23,15 @@ public class Synthesizer {
 
             default: throw new Exception("Unsupported oscillator type");
         }
+    }
+
+    @Override
+    public void loadPatch(OscillatorType osc) throws Exception {
+        setOscillator(osc);
+    }
+
+    @Override
+    public void loadFromDisk(String path) throws Exception {
+        super.loadFromDisk(path);
     }
 }

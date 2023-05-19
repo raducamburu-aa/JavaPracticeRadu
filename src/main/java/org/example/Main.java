@@ -11,6 +11,8 @@ public class Main {
         synth1.setOscillator(OscillatorType.Triangle);
         System.out.println(synth1.getShape());
 
+        synth1.loadFromDisk("1");
+        System.out.println(synth1.getShape());
 
         //primeste un array si o valoare si returneaza  indexul unde se gaseste valoarea aia sau-1 daca nu se gaseste
         //System.out.println(indexOf(new int[]{1, 2, 3, 4}, 5));
