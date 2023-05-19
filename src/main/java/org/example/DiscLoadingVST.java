@@ -7,17 +7,17 @@ public abstract class DiscLoadingVST implements VST{
     @Override
     public void loadFromDisk(Path path) throws Exception {
         String fileContents = Files.readString(path);
-        int oscType = Integer.parseInt(fileContents);
+         OscillatorType oscType = OscillatorType.valueOf(fileContents);
 
         switch (oscType){
-            case 1:
+            case Sine:
                 loadPatch(OscillatorType.Sine);
                 break;
-            case 2:
+            case Triangle:
                  loadPatch(OscillatorType.Triangle);
                 break;
             default:
-                System.out.println("error");
+                System.out.println("Invalid Oscillator type");
         }
     }
 }
